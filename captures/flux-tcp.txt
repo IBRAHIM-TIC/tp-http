@@ -1,0 +1,52 @@
+
+===================================================================
+Follow: tcp,ascii
+Filter: tcp.stream eq 0
+Node 0: [::1]:64304
+Node 1: [::1]:80
+585
+GET /tp-http/formulaire.php HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:161.0) Gecko/20100101 Firefox/161.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Cookie: MasteriyoLearnPageWelcomeMessage-41-1569=shown
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+Pragma: no-cache
+Cache-Control: no-cache
+
+
+	632
+HTTP/1.1 200 OK
+Date: Fri, 27 Nov 2026 15:01:26 GMT
+Server: Apache/2.4.65 (Win64) PHP/8.3.28 mod_fcgid/2.3.10-dev
+X-Powered-By: PHP/8.3.28
+Content-Length: 370
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Test HTTP</title></head>
+<body>
+  <h1>Bonjour </h1>
+
+  <form method="get">
+    <input name="nom" placeholder="Votre nom">
+    <button>Envoyer en GET</button>
+  </form>
+
+  <form method="post">
+    <input name="nom" placeholder="Votre nom">
+    <button>Envoyer en POST</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+Firefox 161 - Outils de développement > Réseau > En-têtes
+Étape 2 : envoi du formulaire en GET
+
+GET http://localhost/tp-http/formulaire.php?nom=IBRAHIM
+État : 200 OK
+Version : HTTP/1.1
+Transfert : 639 o (taille 377 o)
+
+--- En-têtes de la réponse ---
+Connection: Keep-Alive
+Content-Length: 377
+Content-Type: text/html; charset=UTF-8
+Date: Fri, 27 Nov 2026 13:00:54 GMT
+Keep-Alive: timeout=5, max=100
+Server: Apache/2.4.65 (Win64) PHP/8.3.28 mod_fcgid/2.3.10-dev
+X-Powered-By: PHP/8.3.28
+
+--- En-têtes de la requête ---
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr,fr-FR;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: no-cache
+Connection: keep-alive
+Cookie: MasteriyoLearnPageWelcomeMessage-41-1569=shown
+Host: localhost
+Pragma: no-cache
+Priority: u=0, i
+Referer: http://localhost/tp-http/formulaire.php
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:161.0) Gecko/20100101 Firefox/161.0

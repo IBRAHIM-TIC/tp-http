@@ -10,7 +10,7 @@
 | `formulaire.php` | Page qui reçoit un nom en GET ou en POST |
 | `redirige.php` | Page qui redirige (302) vers `formulaire.php` |
 | `statique.html` | Page statique utilisée pour observer le cache (304) |
-| `captures/tp2-http.pcapng` | Capture sur la boucle locale, filtre `tcp port 80` : GET, POST, 404, 302, 304 |
+| `captures/tp2-http.pcapng` | Capture sur la boucle locale, trafic du port 80 : GET, POST, 404, 302, 304 |
 | `captures/tp2-dns-https.pcapng` | Capture sur le Wi-Fi : DNS (`nslookup`) et HTTPS vers Wikipédia |
 | `captures/flux-tcp.txt` | Texte du flux TCP suivi (*Follow TCP Stream*) |
 | `captures/firefox-*.png`, `captures/wireshark-*.png` | Captures d'écran |
@@ -164,7 +164,9 @@ Wireshark installé sous Windows avec **Npcap**, option **Support loopback traff
 
 ### Étapes 1 et 2 — Interface et capture
 
-Interface **Adapter for loopback traffic capture**, filtre de capture `tcp port 80`. Pendant la capture, toutes les actions de la partie 1 ont été refaites dans Firefox (Ctrl+F5, GET, POST, 404, redirection, cache), puis la capture a été arrêtée et enregistrée dans `captures/tp2-http.pcapng` (272 paquets).
+Interface **Adapter for loopback traffic capture**. Pendant la capture, toutes les actions de la partie 1 ont été refaites dans Firefox (Ctrl+F5, GET, POST, 404, redirection, cache), puis la capture a été arrêtée.
+
+Le filtre de capture `tcp port 80` n'avait pas été saisi : la capture brute contenait aussi d'autres échanges locaux de la machine (SSDP, autres applications), soit 18 570 paquets. Seuls les paquets correspondant au filtre d'affichage `tcp.port == 80` ont ensuite été conservés dans `captures/tp2-http.pcapng` (272 paquets), ce qui donne le même résultat que le filtre de capture. C'est exactement la différence expliquée dans le mémo : le filtre de **capture** choisit ce qui est enregistré, le filtre d'**affichage** ce qui est montré.
 
 ### Étape 3 — Filtre `http`
 
